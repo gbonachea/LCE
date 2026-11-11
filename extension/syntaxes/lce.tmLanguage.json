@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "LCE (Qt)",
+  "scopeName": "source.lce",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#builtin-functions" },
+    { "include": "#keywords-control" },
+    { "include": "#keywords-types" },
+    { "include": "#keywords-literals" },
+    { "include": "#operators-logicos" },
+    { "include": "#eventos" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.es",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.line.number-sign.es",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.es",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.es",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.es",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.es",
+      "match": "\\b(\\d+(\\.\\d+)?)\\b"
+    },
+    "builtin-functions": {
+      "name": "support.function.es",
+      "match": "\\b(crear_ventana|crear_boton|crear_etiqueta|crear_caja_texto|mostrar_mensaje|agregar|mostrar|texto|establecer_texto)\\b"
+    },
+    "keywords-control": {
+      "name": "keyword.control.es",
+      "match": "\\b(programa|funcion|si|sino|mientras|para|desde|hasta|retornar)\\b"
+    },
+    "keywords-types": {
+      "name": "storage.type.es",
+      "match": "\\b(entero|decimal|booleano|cadena|nada|ventana|boton|etiqueta|caja_texto)\\b"
+    },
+    "keywords-literals": {
+      "name": "constant.language.es",
+      "match": "\\b(verdadero|falso)\\b"
+    },
+    "operators-logicos": {
+      "name": "keyword.operator.logical.es",
+      "match": "\\b(y|o|no)\\b"
+    },
+    "eventos": {
+      "name": "keyword.control.event.es",
+      "match": "\\b(al|hacer_clic)\\b"
+    },
+    "variables": {
+      "name": "variable.other.es",
+      "match": "\\b[a-zA-Z_ñÑáéíóúÁÉÍÓÚüÜ][a-zA-Z0-9_ñÑáéíóúÁÉÍÓÚüÜ]*\\b"
+    }
+  }
+}

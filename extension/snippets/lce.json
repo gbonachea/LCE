@@ -1,0 +1,69 @@
+{
+  "programa": {
+    "prefix": "programa",
+    "body": [
+      "programa ${1:Nombre} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Bloque principal del programa"
+  },
+  "ventana": {
+    "prefix": "ventana",
+    "body": [
+      "ventana ${1:v} = crear_ventana(\"${2:Título}\", ${3:400}, ${4:300})"
+    ],
+    "description": "Crea una ventana principal"
+  },
+  "boton": {
+    "prefix": "boton",
+    "body": [
+      "boton ${1:b} = crear_boton(\"${2:Texto}\")"
+    ],
+    "description": "Crea un botón"
+  },
+  "al hacer_clic": {
+    "prefix": "clic",
+    "body": [
+      "al hacer_clic(${1:b}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Manejador del evento clic"
+  },
+  "si": {
+    "prefix": "si",
+    "body": [
+      "si (${1:condición}) {",
+      "\t$0",
+      "} sino {",
+      "\t"
+    ],
+    "description": "Condicional si/sino"
+  },
+  "mientras": {
+    "prefix": "mientras",
+    "body": [
+      "mientras (${1:condición}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Bucle mientras"
+  },
+  "para": {
+    "prefix": "para",
+    "body": [
+      "para ${1:i} desde ${2:0} hasta ${3:10} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Bucle para (rango desde/hasta)"
+  },
+  "mostrar_mensaje": {
+    "prefix": "mensaje",
+    "body": [
+      "mostrar_mensaje(\"${1:Título}\", \"${2:Texto}\")"
+    ],
+    "description": "Muestra un cuadro de mensaje"
+  }
+}

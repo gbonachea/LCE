@@ -1,0 +1,56 @@
+{
+  "name": "lce",
+  "displayName": "LCE — Lenguaje de programación",
+  "description": "Resaltado de sintaxis, snippets y compilación para LCE, un lenguaje en español para apps nativas con Qt (.es / .lce).",
+  "version": "0.1.0",
+  "publisher": "tu-nombre",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "lce",
+    "espanol",
+    "qt",
+    "lenguaje",
+    "compilador"
+  ],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/lce.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "lce",
+        "aliases": [
+          "LCE",
+          "lce",
+          "LCE (Qt)"
+        ],
+        "extensions": [
+          ".es",
+          ".lce"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lce",
+        "scopeName": "source.lce",
+        "path": "./syntaxes/lce.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "lce",
+        "path": "./snippets/lce.json"
+      }
+    ]
+  }
+}
