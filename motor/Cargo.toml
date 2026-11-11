@@ -1,0 +1,14 @@
+[package]
+name = "lce"
+version = "0.1.0"
+edition = "2021"
+description = "Transpilador del lenguaje LCE (Qt) a C++ nativo de alto rendimiento"
+authors = ["Tu Nombre <tu@email.com>"]
+license = "MIT"
+
+[[bin]]
+name = "lce"
+path = "src/main.rs"
+
+# Sin dependencias externas: solo la biblioteca estándar de Rust.
+[dependencies]
